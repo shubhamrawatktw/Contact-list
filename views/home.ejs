@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
+    <title><%= title%></title>
+</head>
+<body>
+   <div class="main">
+       <div class="header">
+           <h1>My Contact List</h1>
+       </div>
+       <div class="list">
+           <ul>
+              <% for(i of contacts){ %>
+               <li>
+                   <div class="content">
+                       <p border><%= i.name%></p>
+                       <p border><%= i.phone%></p>
+                       <a href="/delete-contact/?id=<%= i.id%>"><i class="fa-solid fa-xmark"></i></a>
+                   </div>
+               </li>
+              <%}%>
+           </ul>
+       </div>
+       <div >
+           <form action="/create-contact" method="post" class="form ">
+               <input type="text" placeholder="enter name" required name="name">
+               <input type="number|" placeholder="enter phone number" required name="phone">
+               <button type="submit">Add Contact</button>
+           </form>
+       </div>
+   </div>
+   
+
+   <script src="/js/home.js"></script>
+</body>
+</html>
