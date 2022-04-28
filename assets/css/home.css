@@ -38,10 +38,17 @@ body {
 }
 
 .content {
-    margin: -17px 0px 0px -43px;
+    margin: -17px 0px 20px -43px;
     display: flex;
     justify-content: space-between;
     padding: 0px 7px 0px 7px;
+    height: 35px;
+    align-items: center;
+    border: 2px solid lightskyblue;
+}
+
+.content:hover{
+  background-color: lightblue;
 }
 
 .content p{
@@ -50,7 +57,7 @@ body {
 }
 
 .content a i{
-    margin-top: 18px;
+    /* margin-top: 18px; */
     font-size: 1.3rem;
     color: #09919f;
 }
@@ -75,7 +82,9 @@ body {
     background-color: rgba(255, 255, 255, .15);  
   backdrop-filter: blur(5px);
 }
-
+.form input:focus{
+  outline: none;
+}
 
 
 .form button {
